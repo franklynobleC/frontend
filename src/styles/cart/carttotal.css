@@ -112,9 +112,9 @@
 .btn-pay {
   background-color: green;
   color: white;
-  padding: 0.5rem;
+  padding: 0.6rem;
   /* width: auto; */
-  width: 50%;
+  width: 100%;
 
   font-weight: bold;
   font-size: 1rem;
@@ -140,21 +140,54 @@ btn-pay:hover {
 }
 .btn-pay-container {
   display: flex;
+  /* margin: auto; */
+  width: 80%;
+  max-width: 400px;
 }
 
 .image-data {
   width: 10%;
-  height: auto;
+  /* max-width: 20px; */
+  /* margin-left: 40px; */
+  /* height: auto; */
+  align-items: center;
+  display: flex;
+  margin: auto;
+}
+.paystack {
+  width: 20%;
 }
 
 .images-container {
+  width: 100%;
+  padding: 10px;
   display: flex;
-  justify-items: flex-end;
-  align-items: center;
+  justify-items: center;
 
-  width: 70%;
+  align-items: center;
+  margin-bottom: 10px;
+  /* padding: 10px; */
+  background-color: rgb(252, 250, 250);
+  /* background-color: rgb(240, 149, 149); */
+  max-width: 230px;
+  margin-left: 23px;
+  /* padding-left: 10px; */
+  /* margin: auto; */
+  padding-right: 20px;
+  width: 90%;
+  height: auto;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 .form-grid > p {
   margin-bottom: 30px;
   margin-top: 0px;
+}
+.form-group-pay {
+  /* width: 100%; */
+  /* max-width: 300px; */
+  /* margin: auto; */
 }

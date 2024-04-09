@@ -128,3 +128,4 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 - Inspiration
 - References
 # frontend
+ - if user  does not feel all  Datas,  show  Error 'please fill all details'

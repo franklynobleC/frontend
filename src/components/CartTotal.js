@@ -4,6 +4,12 @@ import { useUserContext } from '../context/user_context'
 import { Login } from '../components'
 import { useAuthContext } from '../context/auth_context'
 import styled from 'styled-components'
+//set message  for  css
+import 'react-simple-toasts/dist/theme/info.css'
+import 'react-simple-toasts/dist/theme/success.css'
+import 'react-simple-toasts/dist/theme/sunset.css'
+import 'react-simple-toasts/dist/theme/chroma.css'
+import 'react-simple-toasts/dist/theme/failure.css'
 
 import { Link } from 'react-router-dom'
 import { Route, useNavigate } from 'react-router-dom'
@@ -12,6 +18,7 @@ import paystackImg from '../images/paystack-2.svg'
 import vizacard from '../images/visa.svg'
 import '../styles/cart/carttotal.css'
 import { BeatLoader, MoonLoader } from 'react-spinners'
+import { toastConfigAlert, ShowToast } from '../toastConfigAlert'
 
 //TODO: CHECK  IF  TOKEN  IS EXPIRED, before creating order
 
@@ -28,6 +35,9 @@ const CartTotal = () => {
     clearFromLocalStorage
   } = useCartContext()
 
+  toastConfigAlert.theme = 'success'
+  toastConfigAlert.position = 'center'
+
   const {
     getSingleUser,
     user_address,
@@ -41,9 +51,9 @@ const CartTotal = () => {
   } = useAuthContext()
 
   const [paymentOption, setPaymentOption] = useState('card')
-  const [isLoading, setIsLoading] = useState(false)
   const [userI, setUser] = useState({})
   let navigate = useNavigate()
+  const [isLoading, setIsLoading] = useState(false)
   const token = localStorage.getItem('Access_Token')
   const [formData, setFormData] = useState({
     name: user_name,
@@ -86,8 +96,14 @@ const CartTotal = () => {
       console.log(userId)
       try {
         console.log(formData)
-        if (!formData.deliveryAddress || !formData.phone || !formData.email)
+        if (!formData.deliveryAddress || !formData.phone || !formData.email) {
+          toastConfigAlert.theme = 'sunset'
+
+          ShowToast('an error occurred please  fill all details!')
+          setIsLoading(false)
           return
+        }
+
         await updateUser(
           userId,
           formData.name,
@@ -128,7 +144,11 @@ const CartTotal = () => {
         <form onSubmit={handleSubmit} className='form-container'>
           <div className='form-grid'>
             <h2>Payment Form</h2>
-            <p> Accept secure card payments with PayStack</p>
+            <p> Accept secure card payments with PayStack
+              <br />
+               <b> using master car verve card</b>
+            </p>
+
             <div className='form-group'>
               <label htmlFor='name'>Name</label>
               <input
@@ -169,15 +189,17 @@ const CartTotal = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className='images-container'>
+                <div className='images-container'>
               <img src={mastercard} alt='' className='image-data' />
-              <img src={paystackImg} alt='' className='image-data' />
+              <img src={paystackImg} alt='' className='image-data paystack' />
               <img src={vizacard} alt='' className='image-data' />
             </div>
 
-            <button className='btn-pay'>
-              Pay &#8358;{total_price + delivery_fee}
-            </button>
+            <div className='form-group-pay'>
+              <button className='btn-pay'>
+                Pay &#8358;{total_price + delivery_fee}
+              </button>
+            </div>
             <button className='back' type='button' onClick={() => navigate(-1)}>
               back
             </button>
@@ -203,11 +225,13 @@ const CartTotal = () => {
 }
 const Wrapper = styled.section`
   .form-container {
-    background-color: #c7c8cc;
+    /* background-color: #c7c8cc; */
+    /* background-color:; */
+
     position: relative;
   }
   input {
-    background-color: gray;
+    background-color: grey;
     font-size: large;
     color: white;
   }
@@ -249,6 +273,7 @@ const Wrapper = styled.section`
     align-items: center;
     width: 100%;
   }
+
 `
 
 export default CartTotal
