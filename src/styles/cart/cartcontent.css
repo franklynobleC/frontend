@@ -1,4 +1,4 @@
-.cart-content {
+.cart-content{
   display: flex;
   justify-content: space-between;
   /* display: grid;
@@ -111,8 +111,12 @@
 
   text-align: center;
   border-radius: 3px;
-  transition: opacity 0.2s ease 0s, background-color 0.15s ease 0s,
-    border-color 0.15s ease 0s, filter 0.2s ease 0s, -webkit-filter 0.2s ease 0s;
+  transition:
+    opacity 0.2s ease 0s,
+    background-color 0.15s ease 0s,
+    border-color 0.15s ease 0s,
+    filter 0.2s ease 0s,
+    -webkit-filter 0.2s ease 0s;
   position: relative;
   /* outline: rgb(163, 163, 163) solid 1px !important; */
 }
@@ -127,7 +131,8 @@
 .empty-cart {
   background-color: rgb(218, 218, 218);
   /*margin:auto;
-  */margin-top: 200px;
+  */
+  margin-top: 200px;
   padding: 5rem;
   border-radius: 5px;
   -webkit-border-radius: 5px;

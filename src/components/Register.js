@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useAuthContext } from '../context/auth_context'
 import { Auth } from '@supabase/auth-ui-react'
 import { ThemeSupa } from '@supabase/auth-ui-shared'
@@ -272,7 +272,7 @@ const Register = () => {
                 required
                 class='email-input-text'
                 placeholder=' email'
-                autofocus
+                autoFocus
                 name='email'
                 value={loginData.email}
                 onChange={handleChange}
@@ -287,7 +287,7 @@ const Register = () => {
                 type='password'
                 class='password-input-text'
                 placeholder='password'
-                autofocus
+                autoFocus
                 name='password'
                 value={loginData.password}
                 onChange={handleChange}
@@ -342,9 +342,8 @@ const Wrapper = styled.section`
   }
   /* uncomment  this */
   .login-container {
-    width: 150%;
-     max-width: 800px;
-
+    width: 90%;
+    max-width: 800px;
   }
 
   .auth-ode {
@@ -355,12 +354,17 @@ const Wrapper = styled.section`
     font-size: larger;
     color: #73d802;
     margin: auto;
+    /* padding-left: 100px; */
 
     width: 100%;
     top: 10px;
+    max-width: 300px;
     bottom: auto;
     /* right: 0; */
     top: 600px;
+  }
+  .auth-ode {
+    display: flex;
   }
 
   .auth-ode:hover,
@@ -373,14 +377,14 @@ const Wrapper = styled.section`
     /* z-index: 1; */
     background-image: radial-gradient(#163805, #000002);
     /* background-color: blue; */
-    /* width: 100%; */
+    width: 100%;
 
     border-radius: 5px;
   }
 
   .label-email,
   .label-password {
-    width: 100%;
+    width: 50%;
     color: whitesmoke;
     /* display: flex; */
     /* justify-content:left; */
@@ -415,17 +419,26 @@ const Wrapper = styled.section`
   }
 
   .inside-form-div {
-    margin: 0 auto;
+    margin: auto;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    width: 50vw;
+    /* width: 50vw; */
+    width: 90%;
+    max-width: 360px;
     height: 60vh;
   }
-
+  .auth-mode {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 25%;
+    max-width: 30%;
+    padding-left: 50px;
+  }
   .email-container {
     margin-bottom: 20px;
     padding: 10px;
@@ -437,13 +450,15 @@ const Wrapper = styled.section`
   div > h4 {
     color: whitesmoke;
   }
-  .label-password, .label-email {
+  .label-password,
+  .label-email {
     display: inline-block;
     width: 100px; /* Adjust the width as needed */
     text-align: left;
   }
   input {
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: black;
     border: 1px solid #cecece;
     border-radius: 5px;
     color: #e0eafc;
@@ -456,9 +471,9 @@ const Wrapper = styled.section`
 
     /* width: 90%; */
     /* max-width: 600px; */
-     width: 100%;
-    max-width: 400px;
-        width: 90%;
+    width: 90%;
+    max-width: 300px;
+    /* width: 80%; */
     /* max-width: 300px; */
 
     /* padding: 1rem;
@@ -466,9 +481,9 @@ const Wrapper = styled.section`
     border-radius: 5px; */
 
     /* Media query for mobile devices */
-    @media (max-width: 450px) {
+    @media (max-width: 400px) {
       .form-container {
-        /* background-color: green; */
+        background-color: red;
         border-radius: 5px;
       }
 
