@@ -1,10 +1,68 @@
 .home-page {
-  /* border: none; */
-  margin-top: 10x;
+  margin-top: 10px;
   width: 100%;
 
-  /* background-color: rgb(198, 201, 192);
-   */
+  background-color: rgb(243, 243, 243);
+}
+.support-flex {
+  display: flex;
+  background-color: red;
+}
+.contact-support-flex {
+  margin-top: 5rem;
+  display: flex;
+
+  justify-content: space-around;
+  grid-template-columns: repeat(4, 1fr);
+}
+.image-data {
+  /* max-width: 20px; */
+  /* margin-left: 40px; */
+  /* height: auto; */
+  align-items: center;
+  display: flex;
+}
+.paystack {
+  width: 20%;
+}
+
+.images-container-home {
+  display: flex;
+  /* flex-direction: flex-start; */
+  width: 100%;
+  max-width: 500px;
+  /* padding: 10px; */
+  /* display: flex; */
+  justify-items: center;
+
+  align-items: center;
+  margin-bottom: 50px;
+  background-color: rgb(163, 163, 163);
+
+  /* max-width: 400px; */
+
+  padding-right: 20px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.contact-container-flex {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+
+  background-color: rgb(185, 185, 185);
+  margin-bottom: 200px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 /* CONTENT */
 .content {
@@ -30,6 +88,7 @@
   font-size: 50px;
   font-family: sans-serif;
   margin-bottom: 30px;
+  z-index: 1000;
 
   /* animation: rotate 10s linear infinite; */
 }
@@ -67,10 +126,14 @@
   height: 50px;
   z-index: 2;
 }
+.logos {
+  margin-top: 10px;
+}
 /* Content Right IMAGE CONTAINER      */
 .content-right img {
   border-radius: 50%;
-  width: 400px;
+  width: 300px;
+
   height: auto;
   position: relative;
   animation: rotate 10s linear infinite;
@@ -116,7 +179,7 @@
 .category .list-items .card-list {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);           /*create  columns  with 4      */
+  grid-template-columns: repeat(4, 1fr); /*create  columns  with 4      */
 }
 .category .list-items .card {
   margin-left: 20px;
@@ -174,4 +237,8 @@
 
   max-width: 100%;
   max-height: 100%;
+}
+.contact-support-flex {
+  /* display: flex;
+   */
 }

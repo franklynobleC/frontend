@@ -5,7 +5,10 @@
   justify-content: space-evenly;
 
   background-color: rgb(108, 108, 108);
+  /* background-color: red; */
   min-width: fit-content;
+  width: 100%;
+  /* max-width: 1500px; */
   height: 50px;
 
   padding: 0;

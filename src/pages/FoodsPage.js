@@ -26,7 +26,7 @@ const FoodsPage = () => {
 
     return () => clearTimeout(timeout)
   }, [])
-  console.log('FOODS PAGE', foods)
+
   return (
     <section>
       <article>

@@ -1,13 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { ReactSVG } from 'react-svg'
-import { Hero, Services, SvgComponent } from '../components/index'
+import { Contact, Hero, Services, SvgComponent } from '../components/index'
 import pizzaHome from '../images/pizzaHome.jpg'
 import beefburger from '../images/beefburger.png'
 import removal from '../images/removal.png'
 import freshVeg from '../images/freshVeg.jpg'
 import interswitchimage from '../images/interswitchimage.png'
+import mastercard from '../images/mastercard-4.svg'
+import paystackImg from '../images/paystack-2.svg'
+import vizacard from '../images/visa.svg'
 import '../styles/home.css'
+import '../components/Contact'
 
 const HomePage = () => {
   return (
@@ -97,9 +101,47 @@ const HomePage = () => {
             className='interswitch-image'
           />
         </div>
-        <Services />
       </div>
-      <SvgComponent />
+      {/* <SvgComponent /> */}
+      <div className='contact-container-flex'>
+        <div>
+          <Contact />
+        </div>
+        <div className='contact-support-flex'>
+          <div>
+            <h5>Contact our Support</h5>
+            <div>contact 1</div>
+            <div>contact 1</div>
+            <div>contact 1</div>
+          </div>
+          <div>
+            <h5>Contact our Support</h5>
+            <div>contact 1</div>
+            <div>contact 1</div>
+            <div>contact 1</div>
+          </div>
+          <div>
+            <h5>Contact our Support</h5>
+            <div>contact 1</div>
+            <div>contact 1</div>
+            <div>contact 1</div>
+          </div>
+          <div>
+            <h5>Contact our Support</h5>
+            <div>contact 1</div>
+            <div>contact 1</div>
+            <div>contact 1</div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div className='images-container-home'>
+          <img src={mastercard} alt='' className='image-data' />
+          <img src={paystackImg} alt='' className='image-data paystack' />
+          <img src={vizacard} alt='' className='image-data' />
+        </div>
+      </div>
     </div>
   )
 }

@@ -426,9 +426,11 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    /* width: 50vw; */
+    width: 50vw;
     width: 90%;
     max-width: 360px;
+    /* background-color:blue; */
+    margin-right:20px;
     height: 60vh;
   }
   .auth-mode {

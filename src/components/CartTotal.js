@@ -146,7 +146,7 @@ const CartTotal = () => {
             <h2>Payment Form</h2>
             <p> Accept secure card payments with PayStack
               <br />
-               <b> using master car verve card</b>
+               {/* <b> using master car verve card</b> */}
             </p>
 
             <div className='form-group'>

@@ -6,21 +6,15 @@ import { FiSend } from 'react-icons/fi'
 const Contact = () => {
   return (
     <section className='contact-us'>
-      <div className='section-center'>
-        <h3> Join Our NewsLetter and get 20% off </h3>
+      <h4> Join Our NewsLetter and get 20% off </h4>
 
-        <div className='content'>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-            voluptatibus suscipit esse, nam quia aliquam voluptatum quo,
-            repudiandae debitis architecto ex. Minus voluptatem earum nam. Sunt
-            nesciunt dolorem corporis voluptates!
-          </p>
-          <form
-            className='contact-form'
-            action='https://formspree.io/f/mwkdllrp'
-            method='POST'
-          >
+      <div className='content'>
+        <form
+          className='contact-form'
+          action='https://formspree.io/f/mwkdllrp'
+          method='POST'
+        >
+          <div className='form-details'>
             <input
               type='email'
               placeholder='enter email'
@@ -29,11 +23,12 @@ const Contact = () => {
             />
 
             <button type='submit' className='submit-btn'>
-              <FiSend className='sub-send-icon' />
+              {/* <FiSend className='sub-send-icon' /> */}
               subscribe
             </button>
-          </form>
-        </div>
+          </div>
+        </form>
+          <h5>subscribe  for freshest meals Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quo consequuntur vero quas vitae eum dicta soluta facere rem doloremque? A, unde eaque. Perferendis fuga iusto, possimus enim cupiditate sapiente. </h5>
       </div>
     </section>
   )
