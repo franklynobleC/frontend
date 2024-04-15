@@ -4,6 +4,12 @@
 
   background-color: rgb(243, 243, 243);
 }
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  /* align-items: stretch; */
+  justify-content: start;
+}
 .support-flex {
   display: flex;
   background-color: red;
@@ -13,7 +19,7 @@
   display: flex;
 
   justify-content: space-around;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 .image-data {
   /* max-width: 20px; */
@@ -23,21 +29,22 @@
   display: flex;
 }
 .paystack {
-  width: 20%;
+  /* width: 2 0%; */
 }
 
 .images-container-home {
   display: flex;
   /* flex-direction: flex-start; */
   width: 100%;
-  max-width: 500px;
-  /* padding: 10px; */
+  max-width: 350px;
   /* display: flex; */
-  justify-items: center;
+  /* flex-direction: row-reverse; */
+  /* justify-content: start; */
 
   align-items: center;
   margin-bottom: 50px;
-  background-color: rgb(163, 163, 163);
+  padding-bottom: 10px;
+  background-color: rgb(184, 184, 184);
 
   /* max-width: 400px; */
 
@@ -139,9 +146,6 @@
   animation: rotate 10s linear infinite;
 }
 .content-right .food-img {
-  /* uncomment this  latter */
-  /* width: 400px; */
-  /* height: 400px; */
 }
 
 /* CONTENT RIGHT       */
@@ -168,6 +172,9 @@
   width: 90%;
   position: relative;
   margin-top: 100px;
+}
+h5 {
+  /* color: rgb(119, 119, 119); */
 }
 .category .list-items h3 {
   margin-bottom: 50px;

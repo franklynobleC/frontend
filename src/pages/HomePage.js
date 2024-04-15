@@ -12,7 +12,9 @@ import paystackImg from '../images/paystack-2.svg'
 import vizacard from '../images/visa.svg'
 import '../styles/home.css'
 import '../components/Contact'
+import { SocialIcon } from 'react-social-icons'
 
+const Component = <SocialIcon url='https://twitter.com' />
 const HomePage = () => {
   return (
     <div>
@@ -26,7 +28,7 @@ const HomePage = () => {
                 </h2>
                 <p>
                   Hey, Our Delicious food is waiting for you, we are Always near
-                  to you ,<br /> with fresh Items
+                  to you <br /> with fresh Items
                 </p>
               </div>
               <Link to='/foods'>
@@ -107,39 +109,65 @@ const HomePage = () => {
         <div>
           <Contact />
         </div>
+        {/* <Component /> */}
         <div className='contact-support-flex'>
           <div>
-            <h5>Contact our Support</h5>
-            <div>contact 1</div>
-            <div>contact 1</div>
-            <div>contact 1</div>
-          </div>
-          <div>
-            <h5>Contact our Support</h5>
-            <div>contact 1</div>
-            <div>contact 1</div>
-            <div>contact 1</div>
-          </div>
-          <div>
-            <h5>Contact our Support</h5>
-            <div>contact 1</div>
-            <div>contact 1</div>
-            <div>contact 1</div>
-          </div>
-          <div>
-            <h5>Contact our Support</h5>
-            <div>contact 1</div>
-            <div>contact 1</div>
-            <div>contact 1</div>
-          </div>
-        </div>
+            <div>
+              <div>
+                <div>
+                  <strong>FRESHEST DELICACY</strong>
+                </div>
+                fast and free Delivery with delicious food and with
+              </div>
+              <div> Our job is filling your tummy</div>
+            </div>
 
-        <hr />
+            <div>
+              <br /> <b>JOIN US ON</b>
+            </div>
+            <div className='social-icons'>
+              <SocialIcon
+                url='https://linkedin.com/in/couetilc'
+                style={{ height: 30, width: 30, marginRight: 5 }}
+              />
 
-        <div className='images-container-home'>
-          <img src={mastercard} alt='' className='image-data' />
-          <img src={paystackImg} alt='' className='image-data paystack' />
-          <img src={vizacard} alt='' className='image-data' />
+              <SocialIcon
+                url='https://www.pinterest.com/sherryhubanks/food-business-ideas/'
+                network='pinterest'
+                style={{ height: 30, width: 30 }}
+              />
+              <SocialIcon
+                url='https://web.facebook.com/groups/Item7DealsCatering/about/?locale=kk_KZ&_rdc=1&_rdr'
+                network='facebook'
+                style={{ height: 30, width: 30, marginLeft: 5, marginRight: 5 }}
+              />
+              <SocialIcon
+                network='x'
+                bgColor='#1DA1F2'
+                style={{ height: 30, width: 30 }}
+              />
+            </div>
+          </div>
+          <div>
+            <h5>Contact our Support</h5>
+            <div>Contact</div>
+            <div>About Us</div>
+            <div>Menu</div>
+          </div>
+          <div>
+            <h5>Address</h5>
+            <div>1125, bay ln,City</div>
+            <div>Statename</div>
+            <div>5622</div>
+          </div>
+          <div>
+            <h5>Payment Method And Delivery Patterns</h5>
+            <div className='images-container-home'>
+              <img src={mastercard} alt='' className='image-data' />
+              <img src={paystackImg} alt='' className='image-data paystack' />
+              <img src={vizacard} alt='' className='image-data' />
+            </div>
+          </div>
         </div>
       </div>
     </div>
