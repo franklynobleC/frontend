@@ -55,6 +55,10 @@ h3 {
 .content {
   /* display: flex; */
 }
+.strong {
+  margin: auto;
+  padding-right: 10px;
+}
 
 .submit-btn {
   justify-content: center;
