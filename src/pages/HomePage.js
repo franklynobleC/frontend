@@ -10,6 +10,7 @@ import interswitchimage from '../images/interswitchimage.png'
 import mastercard from '../images/mastercard-4.svg'
 import paystackImg from '../images/paystack-2.svg'
 import vizacard from '../images/visa.svg'
+
 import '../styles/home.css'
 import '../components/Contact'
 import { SocialIcon } from 'react-social-icons'
@@ -96,6 +97,7 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+
         <div className='interswitch-image-container'>
           <img
             src={interswitchimage}
@@ -110,6 +112,7 @@ const HomePage = () => {
           <Contact />
         </div>
         {/* <Component /> */}
+
         <div className='contact-support-flex'>
           <div>
             <div>
@@ -150,9 +153,16 @@ const HomePage = () => {
           </div>
           <div>
             <h5>Contact our Support</h5>
-            <div>Contact</div>
-            <div>About Us</div>
-            <div>Menu</div>
+
+            <Link to='Contact'>
+              <div>Contact</div>
+            </Link>
+            <Link to='about'>
+              <div>About Us</div>
+            </Link>
+            <Link to='foods'>
+              <div>Foods</div>
+            </Link>
           </div>
           <div>
             <h5>Address</h5>

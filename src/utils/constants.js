@@ -29,11 +29,11 @@ export const links = [
 
     url: '/menu'
   },
-  {
-    id: 5,
-    text: 'Contact us',
-    url: '/contact'
-  }
+  // {
+  //   id: 5,
+  //   text: 'Contact us',
+  //   url: '/contact'
+  // }
 ]
 // export const icons = [
 //   {

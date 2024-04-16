@@ -17,7 +17,8 @@ import {
   LoginPage,
   PrivateRoute,
   AuthWrapper,
-  ActualCheckOut
+  ActualCheckOut,
+  ContactForm
 } from './pages'
 import { Orders, Payments, Users } from './pages/dashboardPages'
 
@@ -57,7 +58,8 @@ function App () {
 
   //  change  thePathsName to  '/dashboard'
   const isDashboardRoute =
-    location.pathname.startsWith('/dashboard') ||  location.pathname.startsWith('/')
+    location.pathname.startsWith('/dashboard') ||
+    location.pathname.startsWith('/')
   console.log(location.pathname)
 
   console.log(isDashboardRoute.valueOf())
@@ -76,7 +78,8 @@ function App () {
         <Route path='/dashboard' element={<AdminPage />} />
         <Route path='about' element={<About />} />
         <Route path='menu' element={<Menu />} />
-        <Route path='contact' element={<Contact />} />
+        <Route path='contact' element={<ContactForm />} />
+        {/* <Route path='contact' element={<Contact />} /> */}
         // <Route path='foods' element={<Foods />} />
         <Route path='/login' element={<Register />} />
         {/* <Route path='/loginClick' element={<LoginClick />} /> */}

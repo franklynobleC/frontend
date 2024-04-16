@@ -11,6 +11,7 @@ import AuthWrapper from './AuthWrapper'
 import PrivateRoute from './PrivateRoute'
 import ActualCheckOut from './ActualCheckOut'
 import PasswordRestPage from './PasswordResetPage'
+import ContactForm from './ContactForm'
 
 export {
   Home,
@@ -19,6 +20,7 @@ export {
   SingleFood,
   Error,
   Contact,
+  ContactForm,
   Cart,
   Checkout,
   LoginPage,

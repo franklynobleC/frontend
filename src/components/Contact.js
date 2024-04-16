@@ -6,16 +6,18 @@ import { FiSend } from 'react-icons/fi'
 const Contact = () => {
   return (
     <section className='contact-us'>
-      <h4> Join Our NewsLetter and get 20% off </h4>
 
       <div className='content'>
+
         <form
           className='contact-form'
           action='https://formspree.io/f/mwkdllrp'
           method='POST'
         >
+      <strong> Join Our NewsLetter and get 20% off </strong>
           <div className='form-details'>
             <input
+              required
               type='email'
               placeholder='enter  email'
               name='email'

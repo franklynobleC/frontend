@@ -62,6 +62,7 @@
   grid-template-rows: repeat(2, auto);
   justify-content: center;
 
+  padding-bottom: 20px;
   background-color: rgb(185, 185, 185);
   margin-bottom: 200px;
   border: none;
